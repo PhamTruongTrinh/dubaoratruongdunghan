@@ -24,9 +24,9 @@ def predict():
     output = round(prediction[0])
     int(output)
     if output == 1:
-        return render_template('index.html', prediction_text='Chúc mừng rất có thể bạn sẽ ra trường đúng hạn')
+        return render_template('https://phamtruongtrinh.github.io/dubaoratruongdunghan/predict', prediction_text='Chúc mừng rất có thể bạn sẽ ra trường đúng hạn')
     if output == 0:
-        return render_template('index.html', prediction_text='Có thể bạn sẽ ra trường không đúng hạn. Hãy cố gắng hơn trong học tập')
+        return render_template('https://phamtruongtrinh.github.io/dubaoratruongdunghan/predict', prediction_text='Có thể bạn sẽ ra trường không đúng hạn. Hãy cố gắng hơn trong học tập')
 
 if __name__ == "__main__":
     app.run(debug=True)
