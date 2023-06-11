@@ -8,11 +8,11 @@ app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
 
 #default page of our web-app
-@app.route('/dubaoratruongdunghan/')
+@app.route('https://phamtruongtrinh.github.io/dubaoratruongdunghan/')
 def home():
     return render_template('index.html')
 #To use the predict button in our web-app
-@app.route('/dubaoratruongdunghan/',methods=['POST'])
+@app.route('https://phamtruongtrinh.github.io/dubaoratruongdunghan/',methods=['POST'])
 def predict():
     '''
     For rendering results on HTML GUI
