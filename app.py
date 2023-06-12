@@ -1,6 +1,6 @@
 #import libraries
 import numpy as np
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, redirect
 import pickle
 
 #Initialize the flask App
@@ -8,9 +8,10 @@ app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
 
 #default page of our web-app
-@app.route()home()
-def home():
-    return render_template('https://phamtruongtrinh.github.io/dubaoratruongdunghan/')
+
+@app.route('/some_route')
+def some_route():
+    return redirect('https://phamtruongtrinh.github.io/dubaoratruongdunghan/', code=302)
 #To use the predict button in our web-app
 @app.route('https://phamtruongtrinh.github.io/dubaoratruongdunghan/',methods=['POST'])
 def predict():
